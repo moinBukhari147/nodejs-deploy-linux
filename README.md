@@ -103,7 +103,7 @@ sudo ufw enable
 sudo ufw status
 ```
 
-# NginX Congiguration
+# NginX Configuration
 ```bash
 server {
     listen 80;
