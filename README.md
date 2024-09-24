@@ -296,8 +296,11 @@ Certbot is used to obtain free SSL certificates from Let’s Encrypt.
   -  Auto-Renew SSL Certificates:
   ```bash
 	sudo systemctl status certbot.timer
-  	sudo certbot renew --dry-run  # to test the renewal
+	sudo certbot renew --dry-run  # to test the renewal
   ```
+
+
+   COMPLETED!
 
 # Helping commands
 - Display disk usage and provides output in human-reacable format
