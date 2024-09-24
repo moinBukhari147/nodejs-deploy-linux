@@ -100,11 +100,11 @@ How to deploy the the node.js project on Linux in production.
 Before stating the node.js server using the pm2 first of all we have to install and configure the database.
  - if the database is already installed skip this step otherwise:
    ```bash
-		sudo apt update
+	sudo apt update
 	sudo apt install postgresql postgresql-contrib
 	sudo service postgresql start      # start the service
 	sudo systemctl enable potgresql    # restart autmatically when the system restarts
-		sudo service postgresql status     # check the status of postgresql running or not
+	sudo service postgresql status     # check the status of postgresql running or not
    ```
 - To check which version of postgresql is installed:
   ```
@@ -114,8 +114,8 @@ Before stating the node.js server using the pm2 first of all we have to install 
 
   ```bash
 	sudo -u postgres psql    # swtich ot postgres user to access PostgreSQL
-  	ALTER USER postgres  WITH PASSWORD 'new_password';
-  	\q    # quit
+	ALTER USER postgres  WITH PASSWORD 'new_password';
+	\q    # quit
   ```
 
 - By default PostgreSQL comes with default databse postgres. If you wanted to create the databse then:
