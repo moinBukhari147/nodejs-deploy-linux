@@ -307,3 +307,9 @@ Certbot is used to obtain free SSL certificates from Let’s Encrypt.
 ```
 df -h
 ```
+- Posgres databases helping commands
+```
+sudo -u postgres psql
+\c database_name;     #connect to the database
+\l;     #list all to the databases
+```
