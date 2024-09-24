@@ -54,46 +54,47 @@ How to deploy the the node.js project on Linux in production.
 - Add the follwoing code below and update this accoring to your requirements and setting:
   ```bash
 	module.exports = {
-  apps : [{
-    name: "app-name",
-    script: './src/app.js',
-    instance: 1, // Number of instance not more than avaiables cores
-    exec_mode: "cluster",
-    autorestart: true,
-    watch: ".",
-    max_memory_restart: "200M",
+	  apps : [{
+	    name: "app-name",
+	    script: './src/app.js',
+	    instance: 1, 		# Number of instance not more than avaiables cores
+	    exec_mode: "cluster",
+	    autorestart: true,
+	    watch: ".",
+	    max_memory_restart: "200M",
 
-  env: {
-  NODE_ENV: "production",
-  PORT: 3034,
-  DATABASE_URL: 'postgresql://username:password@localhost:5432/',  // In my case I'm using the postgres, you have set DB_name & URL accordingly
-  DATABASE_NAME: 'db_name',
-  // JWT Secret Key
-  JWT_SECRET_KEY: 'your_jwt_secrect_key_if_uisng_jwt_token_authentication'
-
-  // Email credentials
-  EMAIL_PASS: 'email_creadentials_if_uisng_email_',
-
-  // Google Credentials
-  GOOGLE_CLIENT: 'google_client_id',        // if using the google oauth
-  GOOGLE_CLIENT_SCERET: 'client_secret',    // if using the google oauth
-
-  // Firebase Credentials
-  AGORA_ADMIN_SDK: 'absolution_path_of_firebase_admin_sdk',    // if seding the notification uisng the firebase
-
-  // Facebook Credentials
-  FACEBOOK_CLIENT_ID: 'facebook_app_id',      // if using the facebook login
-  FACEBOOK_CLIENT_SECRET: 'facebook_secret',  // if using the facebook login
-
-  // Payments
-  DS_MERCHANT_MERCHANTCODE: 'merchant_uinquie_id_or_code',    // if using the payment
-  MERCHANT_SECRET_KEY: 'merchant_secrect_key',                // if using the payment
-
-  // ADD or update the enviroments varables names according to the needs
-        }
-  }
-]
-};```
+		  env: {
+		  NODE_ENV: "production",
+		  PORT: 3034,
+		  DATABASE_URL: 'postgresql://username:password@localhost:5432/',  # In my case I'm using the postgres, you have set DB_name & URL accordingly
+		  DATABASE_NAME: 'db_name',
+		  // JWT Secret Key
+		  JWT_SECRET_KEY: 'your_jwt_secrect_key_if_uisng_jwt_token_authentication'
+		
+		  // Email credentials
+		  EMAIL_PASS: 'email_creadentials_if_uisng_email_',
+		
+		  // Google Credentials
+		  GOOGLE_CLIENT: 'google_client_id',        // if using the google oauth
+		  GOOGLE_CLIENT_SCERET: 'client_secret',    // if using the google oauth
+		
+		  // Firebase Credentials
+		  AGORA_ADMIN_SDK: 'absolution_path_of_firebase_admin_sdk',    // if seding the notification uisng the firebase
+		
+		  // Facebook Credentials
+		  FACEBOOK_CLIENT_ID: 'facebook_app_id',      // if using the facebook login
+		  FACEBOOK_CLIENT_SECRET: 'facebook_secret',  // if using the facebook login
+		
+		  // Payments
+		  DS_MERCHANT_MERCHANTCODE: 'merchant_uinquie_id_or_code',    // if using the payment
+		  MERCHANT_SECRET_KEY: 'merchant_secrect_key',                // if using the payment
+		
+		  // ADD or update the enviroments varables names according to the needs
+	        }
+	  }
+	]
+	};
+    ```
 
 # Database installation
 Before stating the node.js server using the pm2 first of all we have to install and configure the database.
