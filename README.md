@@ -273,6 +273,7 @@ Make sure to replace yourdomain.com with your actual domain name and YOUR_APP_PO
 	sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
   ```
 - Disable the configuration for default:
+  
   Skip if using the default
   ```bash
   	sudo rm /etc/nginx/sites-enabled/default
