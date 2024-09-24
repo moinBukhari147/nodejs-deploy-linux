@@ -313,3 +313,9 @@ sudo -u postgres psql
 \c database_name;     #connect to the database
 \l;     #list all to the databases
 ```
+
+- Command to check the install packages on ubuntu
+```
+	dpkg --get-selections		#method 1
+	apt list --installed		#method 2
+```
