@@ -214,7 +214,7 @@ server {
     # Any ohter your nginx configuration 
 
     location / {
-	proxy_pass http:#127.0.0.1:YOUR_APP_PORT;  		# Proxy requests to the backend server running on localhost:YOUR_APP_PORT
+	proxy_pass http://127.0.0.1:YOUR_APP_PORT;  		# Proxy requests to the backend server running on localhost:YOUR_APP_PORT
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -252,7 +252,7 @@ server {
 	# Any ohter your nginx configuration 
 
 	location / {
-		proxy_pass http:#127.0.0.1:YOUR_APP_PORT;  		# Proxy requests to the backend server running on localhost:YOUR_APP_PORT
+		proxy_pass http://127.0.0.1:YOUR_APP_PORT;  		# Proxy requests to the backend server running on localhost:YOUR_APP_PORT
 		proxy_http_version 1.1;
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection 'upgrade';
@@ -318,4 +318,10 @@ sudo -u postgres psql
 ```
 	dpkg --get-selections		#method 1
 	apt list --installed		#method 2
+```
+
+- Configure Git to use the credential cache:
+```
+	git config --global credential.helper cache
+	git config --global credential.helper 'cache --timeout=3600'   #for specific time like one hour
 ```
