@@ -233,13 +233,14 @@ server {
 	sudo systemctl reload nginx     # this relaods the nginx to refelct the changes
   ```
 
-# Setup SSl and shifting to https
-### For ssl we should have a domain that is pointing to your vps static public ip
-### We can use the configuration done in the default file in "/etc/nginx/sites-enabled/" that we have done above
-### Or we can create the new file with the domain name and reconfigure
-- if you wanted to use the default then skip this steps otherwise
+# Setup SSL and shifting to https
+- ### For ssl we should have a domain that is pointing to our vps static public ip
+- ### We can use the configuration done in the default file in "/etc/nginx/sites-enabled/" that we have done above
+- ### Or we can create the new file with the domain name and reconfigure
   
 - Create the file yourdomain.com in drectory "/etc/nginx/sites-available/" using the command below:
+
+  Skip if using the default
   ```bash
 	sudo nano /etc/nginx/sites-available/yourdomain.com
   ``` 
@@ -266,6 +267,7 @@ server {
 Make sure to replace yourdomain.com with your actual domain name and YOUR_APP_PORT
 
 - Enable the configuration for yourdomain.com:
+
   Skip if using the default
   ```bash
 	sudo ln -s /etc/nginx/sites-available/yourdomain.com /etc/nginx/sites-enabled/
