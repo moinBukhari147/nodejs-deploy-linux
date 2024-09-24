@@ -103,7 +103,7 @@ Before stating the node.js server using the pm2 first of all we have to install 
 	sudo apt update
 	sudo apt install postgresql postgresql-contrib
 	sudo service postgresql start      # start the service
-	sudo systemctl enable potgresql    # restart autmatically when the system restarts
+	sudo systemctl enable postgresql    # restart autmatically when the system restarts
 	sudo service postgresql status     # check the status of postgresql running or not
    ```
 - To check which version of postgresql is installed:
